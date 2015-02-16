@@ -1,0 +1,6 @@
+author = "Ilkka Laukkanen <ilkka@ilkka.io>"
+description = "Theme for ilkka.io"
+license = "CC-by-sa-4.0"
+name = "ilkka.io"
+source_repo = ""
+tags = ["html5", "responsive"]
