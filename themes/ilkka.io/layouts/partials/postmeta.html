@@ -5,5 +5,17 @@ Under {{ range $index, $cat := $cats }}<a href="/categories/{{ $cat | urlize }}"
 {{ with $tags := .Params.tags }}
 tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>, {{ end }}
 {{ end }}
-a {{ .ReadingTime }} minute read.
+a
+{{ else if isset .Params "categories" }}
+{{ with $cats := .Params.categories }}
+Under {{ range $index, $cat := $cats }}<a href="/categories/{{ $cat | urlize }}">{{ $cat }}</a>, {{ end }}
 {{ end }}
+a
+{{ else if isset .Params "tags" }}
+{{ with $tags := .Params.tags }}
+tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>, {{ end }}
+{{ end }}
+{{ else }}
+A
+{{ end }}
+{{ .ReadingTime }} minute read from {{ .Date }}.
