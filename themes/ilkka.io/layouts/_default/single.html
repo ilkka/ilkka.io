@@ -2,7 +2,6 @@
 <html>
     {{ partial "htmlhead.html" . }}
     <body>
-        {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
         <main>
             <article class="post">
@@ -16,6 +15,12 @@
                             under
                             {{ range . }}
                                 <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
+                        {{ end }}
+                        {{ with .Params.tags }}
+                            tagged
+                            {{ range . }}
+                                <a href="/tags/{{ . | urlize }}">{{ . }}</a>
                             {{ end }}
                         {{ end }}
                     </p>
