@@ -1,3 +1,6 @@
 baseurl = "https://ilkka.io"
 languageCode = "en-us"
 title = "ilkka.io"
+
+[params]
+    author = "Ilkka"

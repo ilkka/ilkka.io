@@ -1,0 +1,113 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "grids";
+@import "webfonts";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+small, .font_small {
+    font-size: 0.707em;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Linden Hill';
+    line-height: 1.45;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway';
+    margin: 1.414em 0 0.5em;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.998em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.827em;
+}
+
+h3 {
+    font-size: 1.999em;
+    font-family: 'League Spartan';
+}
+
+h4 {
+    font-size: 1.414em;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+p.intro {
+    font-size: 1.368em;
+    border-top: 1px;
+    border-bottom: 1px;
+    padding: 1.154em;
+    text-align: center;
+    border-style: solid;
+    line-height: 1.5em;
+    margin: 1.038em 0px;
+}
+
+p.pullquote {
+    padding-left: 10px;
+    border-style: solid;
+    border-left-width: 3px;
+    color: rgba(51, 51, 51, 1.00);
+    font-size: 1em;
+    line-height: 1.421em;
+    margin: 0px 0px 1.421em 0px;
+}
+
+p.author {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 27px;
+}
+
+@media screen and (max-width: 900px) {
+    article {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 2em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 3.75em;
+        line-height: 0.929em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    p.pullquote {
+        font-size: 16px;
+    }
+
+}

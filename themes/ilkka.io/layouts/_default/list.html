@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "htmlhead.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        {{ partial "nav.html" . }}
+        <main>
+            <ul>
+                {{ range .Data.Pages }}
+                <li>{{ .Title }}</li>
+                {{ end }}
+            </ul>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "htmlhead.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        {{ partial "nav.html" . }}
+        <main>
+            <article class="post">
+                <header class="post__header">
+                    <h1 class="post__title">{{ .Title }}</h1>
+                    <p class="post__meta">
+                        {{ with .Params.author }}
+                            By {{ . }}
+                        {{ end }}
+                        {{ with .Params.categories }}
+                            under
+                            {{ range . }}
+                                <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </p>
+                </header>
+
+                <div class="post__content">
+                    {{ .Content }}
+                </div>
+            </article>
+        </main>
+        {{ partial "footer.html" . }}
+    </body>
+</html>

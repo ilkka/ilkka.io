@@ -1,0 +1,14 @@
+<article class="post post--summary">
+    <h3 class="post__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="post_meta">
+        {{ with .Params.author }}
+            By {{ . }}
+        {{ end }}
+        {{ with .Params.categories }}
+            under
+            {{ range . }}
+                <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+        {{ end }}
+    </p>
+</article>
