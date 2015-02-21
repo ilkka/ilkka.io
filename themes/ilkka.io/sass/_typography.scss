@@ -1,0 +1,39 @@
+small, .font_small {
+    font-size: 0.707em;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Linden Hill';
+    line-height: 1.45;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway';
+    margin: 1.414em 0 0.5em;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.998em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.827em;
+}
+
+h3 {
+    font-size: 1.999em;
+    font-family: 'League Spartan';
+}
+
+h4 {
+    font-size: 1.414em;
+}
+
+p {
+    margin-bottom: 1.3em;
+}

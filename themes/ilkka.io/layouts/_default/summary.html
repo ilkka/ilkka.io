@@ -1,5 +1,5 @@
 <article class="post post--summary">
-    <h3 class="post__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <h3 class="post__title"><a class="post__permalink post__title__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p class="post_meta">
         {{ with .Params.author }}
             By {{ . }}

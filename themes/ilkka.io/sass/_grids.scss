@@ -7,8 +7,3 @@ $susy: (
   columns: 12,
   gutters: 1/4,
 );
-
-body {
-    margin-top: 50px;
-    @include container(50em);
-}

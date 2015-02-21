@@ -1,0 +1,39 @@
+.post__title__link {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover:after {
+        content: ' «';
+        color: $text-color-x-light;
+    }
+}
+
+// TODO: refactor below
+
+p.intro {
+    font-size: 1.368em;
+    border-top: 1px;
+    border-bottom: 1px;
+    padding: 1.154em;
+    text-align: center;
+    border-style: solid;
+    line-height: 1.5em;
+    margin: 1.038em 0px;
+}
+
+p.pullquote {
+    padding-left: 10px;
+    border-style: solid;
+    border-left-width: 3px;
+    color: $text-color-light;
+    font-size: 1em;
+    line-height: 1.421em;
+    margin: 0px 0px 1.421em 0px;
+}
+
+p.author {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 27px;
+}
