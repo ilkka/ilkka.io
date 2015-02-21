@@ -1,0 +1,9 @@
+{{ if and (isset .Params "categories") (isset .Params "tags") }}
+{{ with $cats := .Params.categories }}
+Under {{ range $index, $cat := $cats }}<a href="/categories/{{ $cat | urlize }}">{{ $cat }}</a>, {{ end }}
+{{ end }}
+{{ with $tags := .Params.tags }}
+tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>, {{ end }}
+{{ end }}
+a {{ .ReadingTime }} minute read.
+{{ end }}

@@ -8,21 +8,7 @@
                 <header class="post__header">
                     <h1 class="post__title">{{ .Title }}</h1>
                     <p class="post__meta">
-                        {{ with .Params.author }}
-                            By {{ . }}
-                        {{ end }}
-                        {{ with .Params.categories }}
-                            under
-                            {{ range . }}
-                                <a href="/categories/{{ . | urlize }}">{{ . }}</a>
-                            {{ end }}
-                        {{ end }}
-                        {{ with .Params.tags }}
-                            tagged
-                            {{ range . }}
-                                <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-                            {{ end }}
-                        {{ end }}
+                        {{ partial "postmeta.html" . }}
                     </p>
                 </header>
 
