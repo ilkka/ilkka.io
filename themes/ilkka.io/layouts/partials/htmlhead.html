@@ -1,13 +1,28 @@
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About me and the things I think and do.">
+    <meta property="og:title" content="{{ if ne .Url "/" }}{{ .Title }} &mdash; {{ end }}{{ .Site.Title }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .IsPage }}
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{ .Summary }}">
+    {{ with .Site.Params.twitter }}
+    <meta property="og:article:author" content="http://twitter.com/{{ . }}">
+    {{ end }}
+    <meta property="og:article:published_time" content="{{ .Date.Format "2000-01-01T12:00:00Z00:00" | safeHtml }}">
+    {{ range .Params.tags }}
+    <meta property="og:article:tag" content="{{ . }}">
+    {{ end }}
+    {{ else }}
+    <meta property="og:type" content="website">
+    {{ end }}
 
     <meta name="superfish" content="nofish">
 
-    <title>{{ if eq .Title .Site.Title }}{{ .Title }}{{ else }}{{ .Site.Title }}&mdash;{{ .Title }}{{ end }}</title>
+    <title>{{ if ne .Url "/" }}{{ .Title }} &mdash; {{ end }}{{ .Site.Title }}</title>
 
-    <base href="{{ .Site.BaseUrl }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
