@@ -18,4 +18,4 @@ tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $
 {{ else }}
 A
 {{ end }}
-{{ .ReadingTime }} minute read from {{ .Date }}.
+{{ .ReadingTime }} minute read from {{ .Date.Format "Monday, _2 Jan 2006" }}.
