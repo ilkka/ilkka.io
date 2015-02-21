@@ -7,3 +7,8 @@ $susy: (
   columns: 12,
   gutters: 1/4,
 );
+
+@import "compass/typography/vertical_rhythm";
+$rhythm-unit: "rem";
+
+@include establish-baseline;
