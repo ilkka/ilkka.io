@@ -1,7 +1,9 @@
-header {
-    background: url("/backgrounds/tammerkoski.jpg");
+.page-header {
+    background-color: hsla(0, 0%, 0, 1.0);
     background-size: cover;
-    color: rgb(255, 255, 255);
+    color: hsla(0, 0%, 100%, 1.0);
+    transition: background-image 2s ease-in-out;
+    transition: color 2s ease-in-out;
     background-position: 50% 50%;
     height: 80vh;
     display: flex;
@@ -9,10 +11,23 @@ header {
     align-items: center;
     justify-content: space-between;
     max-height: 800px;
-    padding: rhythm(1, $base-font-size) 0;
+    padding: rhythm(1, ms(0, $base-font-size)) 0;
 
     h1 {
         margin: 0;
+        display: block;
         @include container($sitewidth);
+    }
+
+    &.morning {
+        background: url("/backgrounds/tammerkoski.jpg");
+    }
+
+    &.evening {
+        background: url("/backgrounds/itsenaisyydenkatu.jpg");
+    }
+
+    &.night {
+        background: url("/backgrounds/amsterdam.jpg");
     }
 }
