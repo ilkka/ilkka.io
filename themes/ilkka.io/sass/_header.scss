@@ -14,7 +14,9 @@
     h1 {
         margin: 0;
         display: block;
-        @include container($sitewidth);
+        @include container($sitewidth + 4rem);
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     a, a:visited, a:active {

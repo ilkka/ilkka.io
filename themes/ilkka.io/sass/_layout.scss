@@ -1,5 +1,7 @@
 main {
-    @include container($sitewidth);
+    @include container($sitewidth + 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .nav--main {
