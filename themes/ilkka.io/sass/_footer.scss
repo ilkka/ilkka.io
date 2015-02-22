@@ -1,3 +1,7 @@
 footer {
-    margin-top: rhythm(3, 16px);
+    margin-top: rhythm(3, ms(0, $base-font-size));
+    margin-bottom: rhythm(1, ms(0, $base-font-size));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
