@@ -1,0 +1,25 @@
+{
+  "name": "ilkka.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify scripts/main.es6 -t babelify --outfile public/js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilkka/ilkka.io"
+  },
+  "author": "Ilkka Laukkanen <ilkka@ilkka.io>",
+  "license": "cc-by-sa-4.0",
+  "bugs": {
+    "url": "https://github.com/ilkka/ilkka.io/issues"
+  },
+  "homepage": "https://github.com/ilkka/ilkka.io",
+  "devDependencies": {
+    "babelify": "^5.0.3",
+    "browserify": "^9.0.3",
+    "watchify": "^2.4.0"
+  }
+}
