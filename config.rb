@@ -1,10 +1,11 @@
 require 'compass/import-once/activate'
 require 'susy'
+require 'modular-scale'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-project_path = File.dirname(__FILE__)
+project_path = File.dirname(__FILE__) + "/themes/ilkka.io"
 css_dir = "static/css"
 sass_dir = "sass"
 images_dir = "static/images"
