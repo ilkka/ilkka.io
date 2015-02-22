@@ -4,4 +4,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @include container($sitewidth + 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
 }
