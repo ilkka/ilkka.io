@@ -4,7 +4,7 @@
     <body>
         {{ partial "nav.html" . }}
         <article class="post post--single">
-            <header class="post__header">
+            <header class="page-header post__header" id="header-with-changing-background">
                 <h1 class="post__title">{{ .Title }}</h1>
                 <p class="post__meta">
                     {{ partial "postmeta.html" . }}
