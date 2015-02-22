@@ -13,5 +13,6 @@ header {
 
     h1 {
         margin: 0;
+        @include container($sitewidth);
     }
 }

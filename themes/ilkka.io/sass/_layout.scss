@@ -1,5 +1,5 @@
 main {
-    @include container(40em);
+    @include container($sitewidth);
 }
 
 .nav--main {
