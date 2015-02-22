@@ -1,9 +1,7 @@
 .page-header {
-    background-image: url("/backgrounds/itsenaisyydenkatu.jpg");
     background-color: hsla(0, 0%, 0, 1.0);
     background-size: cover;
     color: hsla(0, 0%, 100%, 1.0);
-    transition: background-image 2s ease-in-out;
     background-position: 50% 50%;
     height: 80vh;
     display: flex;
@@ -17,12 +15,10 @@
         margin: 0;
         display: block;
         @include container($sitewidth);
-        transition: color 2s ease-in-out;
     }
 
-    a, a:visited, a:hover {
+    a, a:visited, a:active {
         color: $accent-pink;
-        transition: color 2s ease-in-out;
     }
 
     &.morning {
@@ -30,21 +26,21 @@
         h1 {
             color: hsla(0, 0%, 0, 1.0);
         }
-        a, a:visited, a:hover {
+        a, a:visited, a:active {
             color: $accent-pink;
         }
     }
 
     &.evening {
         background-image: url("/backgrounds/itsenaisyydenkatu.jpg");
-        a, a:visited, a:hover {
+        a, a:visited, a:active {
             color: $accent-pink;
         }
     }
 
     &.night {
         background-image: url("/backgrounds/amsterdam.jpg");
-        a, a:visited, a:hover {
+        a, a:visited, a:active {
             color: $accent-yellow;
         }
     }

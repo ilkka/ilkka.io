@@ -1,4 +1,7 @@
 .nav--main {
     @include adjust-font-size-to(ms(2, $base-font-size));
     margin: 20px;
+    a, a:active, a:visited {
+        color: $accent-pink;
+    }
 }
