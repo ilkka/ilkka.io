@@ -20,14 +20,14 @@
     }
 
     &.morning {
-        background: url("/backgrounds/tammerkoski.jpg");
+        background-image: url("/backgrounds/tammerkoski.jpg");
     }
 
     &.evening {
-        background: url("/backgrounds/itsenaisyydenkatu.jpg");
+        background-image: url("/backgrounds/itsenaisyydenkatu.jpg");
     }
 
     &.night {
-        background: url("/backgrounds/amsterdam.jpg");
+        background-image: url("/backgrounds/amsterdam.jpg");
     }
 }
