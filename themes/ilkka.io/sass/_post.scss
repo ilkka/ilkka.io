@@ -9,7 +9,7 @@
 }
 
 .post__content {
-    margin-top: rhythm(2, 1rem);
+    margin-top: rhythm(2, ms(1, $base-font-size));
 }
 
 // TODO: refactor below

@@ -1,38 +1,46 @@
+@import "modular-scale";
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 18px;
+$base-line-height: 28px;
+
+$ms-base: $base-font-size;
+$ms-ratio: $golden;
+
+@include establish-baseline;
+@debug ms-list(-1, 4, $ms-base, $ms-ratio);
+
 small, .font_small {
-    @include adjust-font-size-to(0.707rem);
+    @include adjust-font-size-to(ms(-1, $base-font-size));
 }
 
-body {
-    @include adjust-font-size-to(1rem);
+body, p {
+    @include adjust-font-size-to(ms(0, $base-font-size));
     font-family: 'Linden Hill';
 }
 
 h1 {
     font-family: 'Raleway';
-    @include adjust-font-size-to(5.063rem);
-    margin: rhythm(3, 5.063rem) 0 rhythm(1, 5.063rem);
+    @include adjust-font-size-to(ms(3, $base-font-size));
+    margin: rhythm(3, ms(3, $base-font-size)) 0 rhythm(1, ms(3, $base-font-size));
     text-align: center;
     text-transform: uppercase;
 }
 
 h2 {
     font-family: 'League Spartan';
-    @include adjust-font-size-to(2.25rem);
-    margin: rhythm(3, 2.25rem) 0 rhythm(1, 2.25rem);
+    @include adjust-font-size-to(ms(2, $base-font-size));
+    margin: rhythm(2, ms(2, $base-font-size)) 0 rhythm(1, ms(2, $base-font-size));
 }
 
 h3 {
-    @include adjust-font-size-to(1.5rem);
-    margin: rhythm(2, 1.5rem) 0 rhythm(1, 1.5rem);
+    @include adjust-font-size-to(ms(1, $base-font-size));
+    margin: rhythm(2, ms(1, $base-font-size)) 0 rhythm(1, ms(1, $base-font-size));
     font-family: 'League Spartan';
 }
 
 h4 {
     font-family: 'League Spartan';
-    @include adjust-font-size-to(1rem);
-    margin: rhythm(2, 1rem) 0 rhythm(1, 1rem);
-}
-
-p {
-    //margin-bottom: 1.3em;
+    @include adjust-font-size-to(ms(0, $base-font-size));
+    margin: rhythm(2, ms(0, $base-font-size)) 0 rhythm(1, ms(0, $base-font-size));
 }

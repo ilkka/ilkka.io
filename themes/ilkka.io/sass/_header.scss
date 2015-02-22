@@ -1,0 +1,17 @@
+header {
+    background: url("/backgrounds/amsterdam.jpg");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    background-position: 50% 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 800px;
+    padding: rhythm(1, $base-font-size) 0;
+
+    h1 {
+        margin: 0;
+    }
+}

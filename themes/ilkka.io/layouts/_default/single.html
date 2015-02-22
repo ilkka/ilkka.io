@@ -3,20 +3,18 @@
     {{ partial "htmlhead.html" . }}
     <body>
         {{ partial "nav.html" . }}
-        <main>
-            <article class="post">
-                <header class="post__header">
-                    <h1 class="post__title">{{ .Title }}</h1>
-                    <p class="post__meta">
-                        {{ partial "postmeta.html" . }}
-                    </p>
-                </header>
+        <article class="post post--single">
+            <header class="post__header">
+                <h1 class="post__title">{{ .Title }}</h1>
+                <p class="post__meta">
+                    {{ partial "postmeta.html" . }}
+                </p>
+            </header>
 
-                <div class="post__content">
-                    {{ .Content }}
-                </div>
-            </article>
-        </main>
+            <main class="post__content">
+                {{ .Content }}
+            </main>
+        </article>
         {{ partial "footer.html" . }}
     </body>
 </html>

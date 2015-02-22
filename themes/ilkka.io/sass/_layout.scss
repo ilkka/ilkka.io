@@ -1,6 +1,11 @@
-body {
-    margin-top: 50px;
-    @include container(50em);
+main {
+    @include container(40em);
+}
+
+.nav--main {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @media screen and (max-width: 900px) {
