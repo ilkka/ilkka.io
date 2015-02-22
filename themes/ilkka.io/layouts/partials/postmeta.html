@@ -1,19 +1,19 @@
 {{ if and (isset .Params "categories") (isset .Params "tags") }}
 {{ with $cats := .Params.categories }}
-Under {{ range $index, $cat := $cats }}<a href="/categories/{{ $cat | urlize }}">{{ $cat }}</a>, {{ end }}
+{{ range $index, $cat := $cats }}{{ partial "categorylink" $cat }}, {{ end }}
 {{ end }}
 {{ with $tags := .Params.tags }}
-tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>, {{ end }}
+{{ range $index, $tag := $tags }}{{ partial "taglink" $tag }}, {{ end }}
 {{ end }}
 a
 {{ else if isset .Params "categories" }}
 {{ with $cats := .Params.categories }}
-Under {{ range $index, $cat := $cats }}<a href="/categories/{{ $cat | urlize }}">{{ $cat }}</a>, {{ end }}
+{{ range $index, $cat := $cats }}{{ partial "categorylink" $cat }}, {{ end }}
 {{ end }}
 a
 {{ else if isset .Params "tags" }}
 {{ with $tags := .Params.tags }}
-tagged {{ range $index, $tag := $tags }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>, {{ end }}
+{{ range $index, $tag := $tags }}{{ partial "taglink" $tag }}, {{ end }}
 {{ end }}
 {{ else }}
 A
