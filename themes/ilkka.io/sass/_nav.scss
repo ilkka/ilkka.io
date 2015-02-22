@@ -1,0 +1,4 @@
+.nav--main {
+    @include adjust-font-size-to(ms(2, $base-font-size));
+    margin: 20px;
+}
