@@ -11,3 +11,10 @@
 .post__content {
     margin-top: rhythm(2, ms(1, $base-font-size));
 }
+
+.post__meta {
+    @include container($sitewidth + 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
