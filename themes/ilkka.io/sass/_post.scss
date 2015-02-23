@@ -1,10 +1,18 @@
+.post__title {
+    position: relative;
+}
+
 .post__title__link {
     text-decoration: none;
     color: $text-color;
 
     &:hover:after {
-        content: ' «';
+        content: '»';
         color: $text-color-x-light;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: -0.75em;
     }
 }
 
