@@ -1,3 +1,4 @@
+<p>
 {{ if and (isset .Params "categories") (isset .Params "tags") }}
 {{ with $cats := .Params.categories }}
 {{ range $index, $cat := $cats }}{{ partial "categorylink" $cat }}, {{ end }}
@@ -19,3 +20,4 @@ a
 A
 {{ end }}
 {{ .ReadingTime }} minute read from {{ .Date.Format "Monday, _2 Jan 2006" }}.
+</p>
