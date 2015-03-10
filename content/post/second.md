@@ -4,10 +4,22 @@ date = "2015-02-15T22:40:27+02:00"
 tags = ["code", "go"]
 title = "A post preceded by a post"
 author = "Ilkka"
-
 +++
 
 Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
+
+## Some code
+
+{{< highlight js >}}
+(function (p1) {
+    // this here is a function
+    return _.map(p1, function () {
+        return p1.foo;
+    });
+})();
+{{< /highlight >}}
+
+<!-- __ -->
 
 ## Repeat
 
