@@ -5,11 +5,10 @@
         {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
         <main>
-            <ul>
-                {{ range .Data.Pages }}
-                <li>{{ .Title }}</li>
-                {{ end }}
-            </ul>
+            {{ range .Data.Pages }}
+                {{ .Render "summary" }}
+            {{ end }}
         </main>
+        {{ partial "footer.html" . }}
     </body>
 </html>
