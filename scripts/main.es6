@@ -3,7 +3,7 @@ function setupHeaderBackground() {
 
     if (el) {
         let hour = moment().hour();
-        el.className = el.className + ' ' + (hour => {
+        let newClass = (hour => {
             if (hour >= 4 && hour < 12) {
                 return 'morning';
             } else if (hour >= 12 && hour < 20) {
@@ -12,7 +12,12 @@ function setupHeaderBackground() {
                 return 'night';
             }
         })(hour);
+        el.className = el.className + ' ' + newClass;
+        el.setAttribute('data-midnight', 'header-' + newClass);
     }
+
+    // set up midnight
+    $('.nav--main').midnight();
 }
 
 window.addEventListener('load', setupHeaderBackground, false);

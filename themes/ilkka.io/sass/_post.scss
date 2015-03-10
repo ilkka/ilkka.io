@@ -17,7 +17,7 @@
 }
 
 .post__content {
-    margin-top: rhythm(2, ms(1, $base-font-size));
+    padding-top: rhythm(2, ms(1, $base-font-size));
 
     p:first-of-type {
         font-style: italic;

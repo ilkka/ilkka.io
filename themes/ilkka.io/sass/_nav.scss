@@ -1,8 +1,27 @@
 .nav--main {
     @include adjust-font-size-to(ms(2, $base-font-size));
-    margin: 1rem 0.25rem;
+}
 
+.nav__links {
+    margin: 1rem 0.25rem;
+}
+
+.midnightHeader.default,
+.midnightHeader.header-night {
     a, a:active, a:visited {
         color: $accent-pink;
+    }
+}
+
+.midnightHeader.header-morning,
+.midnightHeader.header-evening {
+    a, a:active, a:visited {
+        color: $accent-yellow;
+    }
+}
+
+.midnightHeader.body {
+    a, a:active, a:visited {
+        color: $accent-yellow;
     }
 }
