@@ -1,3 +1,8 @@
 <footer>
-    <p>{{ .Site.Copyright | safeHtml }}{{ with .Site.Params.github }} &mdash; <a href="https://github.com/{{ . }}"><i class="fa fa-github"></i>&nbsp;ilkka</a>{{ end }}{{ with .Site.Params.twitter }} &mdash; <a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter"></i>&nbsp;ilkkalaukkanen</a>{{ end }}. Home icon by iconsmind.com from <a href="https://thenounproject.com">The Noun Project</a>.</p>
+    <div>
+        <p>{{ .Site.Copyright | safeHtml }}</p>
+        <p>{{ with .Site.Params.github }}<a href="https://github.com/{{ . }}"><i class="fa fa-github"></i> ilkka</a> &mdash; {{ end }}
+        {{ with .Site.Params.twitter }}<a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter"></i> ilkkalaukkanen</a>{{ end }}</p>
+        <p>Home icon by iconsmind.com from <a href="https://thenounproject.com">The Noun Project</a>.</p>
+    </div>
 </footer>
