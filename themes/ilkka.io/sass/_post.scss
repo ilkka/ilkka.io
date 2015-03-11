@@ -26,8 +26,6 @@
 }
 
 .post__meta {
-    @include container($sitewidth + 4rem);
-    padding-left: 2rem;
-    padding-right: 2rem;
+    @include site-wide-thing;
     text-align: center;
 }
