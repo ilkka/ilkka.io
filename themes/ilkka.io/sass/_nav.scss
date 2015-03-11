@@ -12,26 +12,6 @@
     margin: 0px;
 }
 
-.midnightHeader.default,
-.midnightHeader.header-night {
-    a, a:active, a:visited {
-        color: $accent-pink;
-    }
-}
-
-.midnightHeader.header-morning,
-.midnightHeader.header-evening {
-    a, a:active, a:visited {
-        color: $accent-yellow;
-    }
-}
-
-.midnightHeader.body {
-    a, a:active, a:visited {
-        color: $accent-yellow;
-    }
-}
-
 .icon--home {
     display: inline-block;
     transform: translate(0, 0);
@@ -39,4 +19,24 @@
     height: 3rem;
     background-image: url('/icons/home.svg');
     background-size: cover;
+}
+
+.midnightHeader.default,
+.midnightHeader.header-night {
+    .icon--home {
+        background-image: url('/icons/home-light.svg');
+    }
+}
+
+.midnightHeader.header-morning,
+.midnightHeader.header-evening {
+    .icon--home {
+        background-image: url('/icons/home-light.svg');
+    }
+}
+
+.midnightHeader.body {
+    .icon--home {
+        background-image: url('/icons/home.svg');
+    }
 }
