@@ -5,7 +5,7 @@
         {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
         <main data-midnight="body">
-            {{ range .Data.Pages }}
+            {{ range where .Data.Pages "Section" "blog" }}
                 {{ .Render "summary" }}
             {{ end }}
         </main>
