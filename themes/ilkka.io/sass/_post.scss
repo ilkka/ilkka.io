@@ -38,7 +38,15 @@
     }
 }
 
-.post__meta {
+.post__full .post__meta {
     @include site-wide-thing;
     text-align: center;
+}
+
+.post--summary {
+    margin-bottom: rhythm(5, ms(1, $base-font-size));
+
+    .post__meta {
+        margin-bottom: rhythm(1, ms(1, $base-font-size));
+    }
 }
