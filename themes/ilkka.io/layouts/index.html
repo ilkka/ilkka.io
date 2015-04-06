@@ -5,9 +5,10 @@
         {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
         <main data-midnight="body">
-            {{ range where .Data.Pages "Section" "blog" }}
+            {{ range (.Paginate (where .Data.Pages "Section" "blog")).Pages }}
                 {{ .Render "summary" }}
             {{ end }}
+            {{ template "_internal/pagination.html" . }}
         </main>
         {{ partial "footer.html" . }}
     </body>

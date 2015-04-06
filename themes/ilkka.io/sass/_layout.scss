@@ -1,3 +1,13 @@
 main {
     @include site-wide-thing;
 }
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+        margin: 0 0.5em;
+    }
+}
