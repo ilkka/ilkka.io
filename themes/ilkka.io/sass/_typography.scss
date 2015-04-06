@@ -53,3 +53,13 @@ blockquote {
     margin: rhythm(1, ms(0, $base-font-size)) * 0.5 0;
     font-family: 'Source Code Pro', ;
 }
+
+ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 2em;
+}

@@ -19,9 +19,22 @@
 .post__content {
     padding-top: rhythm(2, ms(1, $base-font-size));
 
-    p:first-of-type {
-        font-style: italic;
-        @include adjust-font-size-to(ms(0.25, $base-font-size), 1);
+    & > p,
+    & > ul,
+    & > ol,
+    & > dl,
+    & > blockquote {
+        margin-top: 2em;
+
+        &:first-child {
+            margin-top: 0;
+            font-style: italic;
+            @include adjust-font-size-to(ms(0.25, $base-font-size), 1);
+        }
+    }
+
+    .highlight {
+        color: rgb(255, 255, 255);
     }
 }
 
