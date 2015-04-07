@@ -1,0 +1,6 @@
+{
+    "esnext": true,
+    "preset": "airbnb",
+    "validateIndentation": 4,
+    "excludeFiles": ["node_modules/**", "vendor/**", "build/**"]
+}
