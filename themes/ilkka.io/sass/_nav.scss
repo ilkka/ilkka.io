@@ -1,4 +1,7 @@
 .nav--main {
+    position: fixed;
+    top: 0;
+    left: 0;
     @include adjust-font-size-to(ms(2, $base-font-size));
 
     .hide {
