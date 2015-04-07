@@ -1,4 +1,4 @@
-baseurl = "https://ilkka.io"
+baseurl = "http://ilkka.io"
 languageCode = "en-us"
 title = "ilkka.io"
 copyright = "© 2015 Ilkka Laukkanen. <a href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
