@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "watchify scripts/main.es6 -t babelify --outfile static/js/bundle.js"
+    "start": "concurrent -k 'npm run js-watch' 'compass watch'",
+    "js": "webpack --progress --color",
+    "js-watch": "webpack --watch --progress --color",
+    "css": "compass compile",
+    "prefixes": "autoprefixer -d themes/ilkka.io/static/css -b '> 5%' themes/ilkka.io/static/css/*.css",
+    "publish": "npm run js && npm run css && npm run prefixes && git --work-tree public --git-dir public/.git add --all && git --work-tree public --git-dir public/.git commit -m 'Regenerated' && git --work-tree public --git-dir public/.git push origin master"
   },
   "repository": {
     "type": "git",
@@ -18,8 +22,10 @@
   },
   "homepage": "https://github.com/ilkka/ilkka.io",
   "devDependencies": {
-    "babelify": "^5.0.3",
-    "browserify": "^9.0.3",
-    "watchify": "^2.4.0"
+    "autoprefixer": "^5.1.0",
+    "babel-core": "^5.0.12",
+    "babel-loader": "^5.0.0",
+    "concurrently": "0.0.5",
+    "webpack": "^1.8.4"
   }
 }
