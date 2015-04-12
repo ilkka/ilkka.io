@@ -5,9 +5,13 @@
     color: hsla(0, 0%, 100%, 1.0);
     background-position: 50% 50%;
     height: 80vh;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
     justify-content: center;
     max-height: 800px;
     padding: rhythm(1, ms(0, $base-font-size)) 0;
