@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     {{ partial "htmlhead.html" . }}
-    <body>
+    <body class="pure-g">
         {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
-        <main data-midnight="body">
+        <main class="pure-u-1 pure-u-md-3-5" id="content-wrapper" data-midnight="body">
             {{ range .Data.Pages }}
                 {{ .Render "summary" }}
             {{ end }}

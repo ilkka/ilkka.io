@@ -1,7 +1,0 @@
-@import "variables";
-
-@mixin site-wide-thing() {
-        @include container($sitewidth + 6rem);
-        padding-left: 3rem;
-        padding-right: 3rem;
-}
