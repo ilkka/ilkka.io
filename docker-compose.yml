@@ -1,6 +1,6 @@
 ---
 sitedata:
-  build: site
+  build: .
   volumes:
     - /usr/local/apache2/htdocs
   read_only: true
