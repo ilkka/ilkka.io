@@ -1,0 +1,10 @@
+---
+sitedata:
+  build: site
+  volumes:
+    - /usr/local/apache2/htdocs
+  read_only: true
+server:
+  build: server
+  volumes_from:
+    - sitedata:rw
