@@ -6,7 +6,7 @@ sitedata:
   read_only: true
   command: "true"
 server:
-  build: server
+  image: ilkka/httpd-ssl
   ports:
     - "80:80"
     - "443:443"
