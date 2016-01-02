@@ -12,6 +12,7 @@ ENV HUGO_VERSION 0.15
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
 ENV WEBROOT /usr/local/apache2/htdocs
 ENV HUGO_BASEURL http://localhost:1313
+ENV HUGO_THEME ilkka.io
 
 RUN mkdir /site
 WORKDIR /site
@@ -32,5 +33,5 @@ RUN apk del build-dependencies
 EXPOSE 1313
 
 ADD . /site
-RUN hugo -d ${WEBROOT} && npm run js && npm run prefixes
+RUN hugo -t ${HUGO_THEME} -d ${WEBROOT} && npm run js && npm run prefixes
 CMD hugo server -b ${HUGO_BASEURL}
