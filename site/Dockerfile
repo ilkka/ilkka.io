@@ -6,7 +6,7 @@ MAINTAINER Ilkka Laukkanen <ilkka@ilkka.io>
 
 RUN apk --no-cache add python \
   && apk --no-cache add --virtual build-dependencies python-dev py-pip build-base \
-  && pip install pygment \
+  && pip install pygments \
   && apk del build-dependencies
 
 ENV HUGO_VERSION 0.15
@@ -24,6 +24,6 @@ WORKDIR /site
 
 EXPOSE 1313
 
-ADD site/ /site
+ADD . /site
 RUN hugo -d ${WEBROOT}
 CMD hugo server -b ${HUGO_BASEURL}
