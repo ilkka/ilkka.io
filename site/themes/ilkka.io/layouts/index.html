@@ -4,7 +4,7 @@
     <body class="pure-g">
         {{ partial "header.html" . }}
         {{ partial "nav.html" . }}
-        <main class="pure-u-1 pure-u-md-3-5" id="content-wrapper" data-midnight="body">
+        <main class="pure-u-20-24 pure-u-md-3-5" id="content-wrapper" data-midnight="body">
             {{ range (.Paginate (where .Data.Pages "Section" "blog")).Pages }}
                 {{ .Render "summary" }}
             {{ end }}
