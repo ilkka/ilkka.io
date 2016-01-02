@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrent -k 'npm run js-watch' 'compass watch'",
+    "start": "npm run js-watch",
     "js": "webpack --progress --color",
     "js-watch": "webpack --watch --progress --color",
-    "css": "compass compile",
-    "prefixes": "autoprefixer -d themes/ilkka.io/static/css -b '> 5%' themes/ilkka.io/static/css/*.css",
-    "publish": "npm run js && npm run css && npm run prefixes && git --work-tree public --git-dir public/.git add --all && git --work-tree public --git-dir public/.git commit -m 'Regenerated' && git --work-tree public --git-dir public/.git push origin master"
+    "prefixes": "autoprefixer -d themes/ilkka.io/static/css -b '> 5%' themes/ilkka.io/static/css/*.css"
   },
   "repository": {
     "type": "git",
@@ -25,7 +23,6 @@
     "autoprefixer": "^5.1.0",
     "babel-core": "^5.0.12",
     "babel-loader": "^5.0.0",
-    "concurrently": "0.0.5",
     "webpack": "^1.8.4"
   }
 }
