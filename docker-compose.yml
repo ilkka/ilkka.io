@@ -4,7 +4,14 @@ sitedata:
   volumes:
     - /usr/local/apache2/htdocs
   read_only: true
+  command: "true"
 server:
   build: server
+  ports:
+    - "80:80"
+    - "443:443"
   volumes_from:
     - sitedata:rw
+  volumes:
+    - ${SSL_CERT_PATH}:/usr/local/apache2/conf/server.crt
+    - ${SSL_CERT_KEY_PATH}:/usr/local/apache2/conf/server.key
