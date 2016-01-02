@@ -33,5 +33,5 @@ RUN apk del build-dependencies
 EXPOSE 1313
 
 ADD . /site
-RUN hugo -t ${HUGO_THEME} -d ${WEBROOT} && npm run js && npm run prefixes
+RUN npm run js && npm run prefixes && hugo -t ${HUGO_THEME} -d ${WEBROOT}
 CMD hugo server -b ${HUGO_BASEURL}
