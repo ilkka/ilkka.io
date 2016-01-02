@@ -26,7 +26,7 @@ RUN curl -L https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${H
   && rm /usr/local/${HUGO_BINARY}.tar.gz
 
 # remove the metapackage we created earlier
-RUN apk del build-depedencies
+RUN apk del build-dependencies
 
 # for if we run hugo server, as is the default cmd
 EXPOSE 1313
