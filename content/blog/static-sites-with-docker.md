@@ -121,4 +121,6 @@ This all works rather splendidly, but there are a few things I wasn't able to so
 
 Another improvement would be to move my dev setup onto Docker too, so that I could use the content image to run Hugo in dev server mode. Unfortunately I mostly work on a Mac though, so then I run afoul of all the usual virtual machines plus volumes -related issues. Hugo, being written in Go, is just a single static binary, so it's not like installing it is even hard, so I'm not really even sure if this is worth the trouble.
 
+Last but definitely not least, I'd really like to set up a process where Docker Hub would trigger a webhook that would publish the blog when the content image builds. [Nathan LeClaire wrote about this](http://nathanleclaire.com/blog/2014/08/17/automagical-deploys-from-docker-hub/), and I'll be sure to give this a try the next time I have some time on my hands.
+
 All in all, I'm really happy with how the whole thing turned out, since now I have exactly zero bytes of volatile configuration sitting on my server, and I can destroy and recreate it at will to do e.g. a distro upgrade. I hope you got some ideas out of this, now go build something!
