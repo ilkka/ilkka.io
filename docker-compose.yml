@@ -10,9 +10,9 @@ server:
   ports:
     - "80:80"
     - "443:443"
-  drop_cap:
+  cap_drop:
     - ALL
-  add_cap:
+  cap_add:
     - NET_BIND_SERVICE
     - SETUID
     - SETGID
