@@ -134,10 +134,9 @@ footer {
     margin-top: 2em;
 }
 
-.post__content:first-child {
+.post__content *:first-child {
     margin-top: 0;
-    font-style: italic;
-    font-size: 80%;
+    /*font-style: italic;*/
 }
 
 .post__content .highlight {
