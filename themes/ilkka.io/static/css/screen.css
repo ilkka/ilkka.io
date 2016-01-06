@@ -1,3 +1,200 @@
+body {
+
+}
+
+#content-wrapper {
+    display: block;
+    margin: 0 auto;
+}
+
+.nav--main {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav--main .hide {
+    position: relative;
+    overflow: hidden;
+    left: -9999em;
+}
+
+.nav__links {
+    margin: 0px;
+}
+
+.icon--home {
+    display: inline-block;
+    transform: translate(0, 0);
+    width: 3rem;
+    height: 3rem;
+    background-image: url('/icons/home.svg');
+    background-size: cover;
+}
+
+.midnightHeader.default .icon--home,
+.midnightHeader.header-night .icon--home {
+    background-image: url('/icons/home-light.svg');
+}
+
+.midnightHeader.header-morning .icon--home,
+.midnightHeader.header-evening .icon--home{
+    background-image: url('/icons/home-light.svg');
+}
+
+.midnightHeader.body .icon--home {
+    background-image: url('/icons/home.svg');
+}
+
+footer {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-header {
+    background-color: hsla(0, 0%, 0, 1.0);
+    background-image: url("/backgrounds/tammerkoski.jpg");
+    background-size: cover;
+    color: hsla(0, 0%, 100%, 1.0);
+    background-position: 50% 50%;
+    height: 80vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    max-height: 800px;
+}
+
+.page-header h1 {
+    color: hsla(0, 100%, 100%, 1.0);
+    margin: 0;
+    display: block;
+}
+
+.page-header a,
+.page-header a:visited,
+.page-header a:active {
+    color: hsl(304, 78.3%, 81.6%);
+}
+
+.pagination {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 0.5em;
+    list-style-type: none;
+
+}
+
+.post__title {
+    position: relative;
+}
+
+.post__title__link {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover:after {
+        content: '»';
+        color: $text-color-x-light;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: -0.75em;
+    }
+}
+
+.post__content {
+    padding-top: 2rem;
+}
+
+.post__content > p,
+.post__content > ul,
+.post__content > ol,
+.post__content > dl,
+.post__content > blockquote {
+    margin-top: 2em;
+}
+
+.post__content *:first-child {
+    margin-top: 0;
+    /*font-style: italic;*/
+}
+
+.post__content .highlight {
+    color: rgb(255, 255, 255);
+}
+
+.post__contet ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+.post__content ol {
+    list-style-type: decimal;
+    padding-left: 2em;
+}
+
+.post__full .post__meta {
+    text-align: center;
+}
+
+.post--summary {
+    margin-bottom: 5rem;
+}
+
+.post--summary .post__meta {
+    margin-bottom: 1rem;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    /*font-family: "Linden Hill", Georgia, Times, "Times New Roman", serif;*/
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+    font-family: "Raleway";
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2, h3, h4 {
+    font-family: "League Spartan";
+}
+
+blockquote {
+    padding-left: 10px;
+    border-style: solid;
+    border-left-width: 3px;
+    color: hsla(0, 0%, 20%, 1.00);
+}
+
+.highlight {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    font-family: 'Source Code Pro', ;
+}
+
 /*
  * LEAGUE GOTHIC
  */

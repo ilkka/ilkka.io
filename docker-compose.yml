@@ -1,0 +1,20 @@
+---
+sitedata:
+  image: ilkka/sitedata
+  volumes:
+    - /usr/local/apache2/htdocs
+  read_only: true
+  command: "true"
+server:
+  image: ilkka/httpd-ssl
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes_from:
+    - sitedata:ro
+  volumes:
+    - ${SSL_CERT_PATH}:/usr/local/apache2/conf/server.crt:ro
+    - ${SSL_CERT_KEY_PATH}:/usr/local/apache2/conf/server.key:ro
+  environment:
+    SERVER_NAME: ilkka.io
+  restart: always
