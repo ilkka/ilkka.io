@@ -131,7 +131,7 @@ footer {
 .post__content > ol,
 .post__content > dl,
 .post__content > blockquote {
-    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .post__content *:first-child {
