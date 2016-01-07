@@ -153,7 +153,8 @@ footer {
     padding-left: 2em;
 }
 
-.post__full .post__meta {
+.post__full .post__meta,
+header .post__meta {
     text-align: center;
 }
 
