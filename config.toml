@@ -1,7 +1,7 @@
 baseurl = "http://ilkka.io"
 languageCode = "en-us"
 title = "ilkka.io"
-copyright = "© 2015 Ilkka Laukkanen. <a href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
+copyright = "This is a thing by Ilkka Laukkanen. <a href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Some rights reserved</a>."
 theme = "ilkka.io"
 Paginate = 10
 
