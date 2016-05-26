@@ -18,4 +18,10 @@ then
   docker rm $CTR
 fi
 docker run -d -e VIRTUAL_HOST=ilkka.io --name $CTR --restart always ilkkaio-sitedata
-docker restart caddy-proxy
+
+if docker inspect --type container caddy-proxy &>/dev/null;
+then
+  docker restart caddy-proxy
+else
+  docker run -d -v /var/run/docker.sock:/tmp/docker.sock:ro -v /etc/caddyproxy:/root/.caddy --name caddy-proxy -p 80:80 -p 443:443 caddy-proxy --email ilkka@ilkka.io
+fi
